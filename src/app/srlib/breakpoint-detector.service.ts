@@ -4,10 +4,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class BreakpointDetectorService {
-
   
   currentBreakpoint$: Observable<string>;
-  
   private _subject: Subject<string>;
   
   constructor() {
@@ -16,8 +14,8 @@ export class BreakpointDetectorService {
   }
   
   setBreakpoint(breakpoint) {
-    console.log('setting', breakpoint);
     this.currentBreakpoint$ = breakpoint;
     this._subject.next(breakpoint);
   }
+  
 }

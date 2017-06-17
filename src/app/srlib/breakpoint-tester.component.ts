@@ -29,7 +29,7 @@ export class BreakpointTesterComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('com init', this.breakpoint);
+    console.log('component init', this.breakpoint);
   }
 
 }
