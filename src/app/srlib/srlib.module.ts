@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BreakpointDetectorComponent } from './breakpoint-detector/breakpoint-detector.component';
 import { BreakpointDetectorDirective } from './breakpoint-detector.directive';
 import { WindowRefService } from './window-ref.service';
+import { BreakpointDetectorService } from './breakpoint-detector.service';
+import { BreakpointTesterComponent } from './breakpoint-tester.component';
 
 @NgModule({
   imports: [
@@ -11,15 +13,18 @@ import { WindowRefService } from './window-ref.service';
 
   declarations: [
     BreakpointDetectorComponent,
-    BreakpointDetectorDirective
+    BreakpointDetectorDirective,
+    BreakpointTesterComponent
   ],
 
   providers: [
-    WindowRefService
+    WindowRefService,
+    BreakpointDetectorService
   ],
 
   exports: [
-    BreakpointDetectorDirective
+    BreakpointDetectorDirective,
+    BreakpointTesterComponent
   ]
 })
 export class SRLibModule { }
