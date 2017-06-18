@@ -1,24 +1,26 @@
 Angular Directive for break point detection 
 
 
-####**Installation**
+#### **Installation**
 
     npm install breakpoint-detector 
 
-####**Steps**
+#### **Steps**
 1. Import **BreakpointDetectorModule**
 2. Configure breakpoints (optional)
 3. add **appBreakpointDetector** *directive* to ***root module*** container div
 4. subscribe to the break point change in component (s)
 
 
+----
 
-####**1.Import BreakpointDetectorModule**
+
+#### **1.Import BreakpointDetectorModule**
 ```
 import {BreakpointDetectorModule} from './breakpoint-detector/breakpoint-detector.module';
 ```
 
-####**2.Configure breakpoints (optional)**
+#### **2.Configure breakpoints (optional)**
 
  - **Use Existing breakpoints**
 
@@ -66,7 +68,7 @@ import {BreakpointDetectorModule} from './breakpoint-detector/breakpoint-detecto
 })
 export class AppModule { }
 ```
-####3.add ***appBreakpointDetector*** directive to root module container div
+#### 3.add ***appBreakpointDetector*** directive to root module container div
 *app.component.html*
 ```
 <div appBreakpointDetector >
@@ -75,7 +77,7 @@ export class AppModule { }
  
  </div>
 ```
-####**4. Subscribe** to the break point change in *component(s)*
+#### **4. Subscribe** to the break point change in *component(s)*
 
 *app.component.ts*
 
