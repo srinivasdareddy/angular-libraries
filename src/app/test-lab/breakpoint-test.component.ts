@@ -1,18 +1,18 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { BreakpointDetectorService } from './breakpoint-detector.service';
-
+import { BreakpointDetectorService } from '../breakpoint-detector/breakpoint-detector.service';
 import 'rxjs/add/operator/distinctUntilChanged';
 
 @Component({
-  selector: 'app-breakpoint-tester',
+  selector: 'app-breakpoint-test',
   template: `
     <p>
-      current breakpoint ! {{ breakpoint }}
+      current breakpoint +> {{ breakpoint }}
     </p>
   `,
   styles: []
 })
-export class BreakpointTesterComponent implements OnInit {
+export class BreakpointTestComponent implements OnInit {
+  
   public breakpoint: string;
   
   constructor(BService: BreakpointDetectorService, private cdRef: ChangeDetectorRef) {
@@ -22,14 +22,13 @@ export class BreakpointTesterComponent implements OnInit {
         this.breakpoint = newBreakpoint;
         
         /* ERROR Error: ExpressionChangedAfterItHasBeenCheckedError:
-        Expression has changed after it was checked.
-        Previous value: 'undefined'. Current value: 'MOBILE' */
+         Expression has changed after it was checked.
+         Previous value: 'undefined'. Current value: 'MOBILE' */
         this.cdRef.detectChanges();
-    });
+      });
   }
 
   ngOnInit() {
-    console.log('component init', this.breakpoint);
   }
 
 }
