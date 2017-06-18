@@ -102,12 +102,3 @@ constructor(private service: BreakpointDetectorService, private cdRef: ChangeDet
 
 
 ----------
-
-
-**Dependencies**
-```
- "@angular/common": "^4.0.0",
- "@angular/compiler": "^4.0.0",
- "@angular/core": "^4.0.0",
- "@angular/platform-browser": "^4.0.0",
-```
